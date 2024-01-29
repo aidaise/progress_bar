@@ -2,18 +2,19 @@
   <div class="progress-container">
     <div>
       <label for="percentInput" class="input-label">Введите процент:</label>
-      <input type="number" id="percentInput" class="percent" v-model="percent" @input="setProgressCircle">
+      <input type="number" id="percentInput" v-model="percent" @input="setProgressCircle">
     </div>
 
     <svg class="progress-ring" viewBox="0 0 200 200" preserveAspectRatio="none">
+      <circle cx="100" cy="100" :r="radius" fill="none" stroke="#b6b6b6" stroke-width="7"/>
       <circle ref="ci" class="progress-ring__circle"
-              stroke="white"
+              stroke="green"
               stroke-width="7"
               cx="100" cy="100"
               :r="radius"
               fill="transparent"
       ></circle>
-      <text class="progress-text" x="50%" y="50%" dy=".3em" text-anchor="middle" fill="white" font-size="24">{{ progressInNumber }}%</text>
+      <text class="progress-text" x="50%" y="50%" dy=".3em" text-anchor="middle" font-size="24">{{ progressInNumber }}%</text>
     </svg>
   </div>
 </template>
@@ -23,8 +24,9 @@ export default {
   name: 'App',
   data() {
     return {
-      radius: 57,
-      percent: 1,
+      radius: 60,
+      percent: 0.5,
+      progressColor: 'grey',
     }
   },
   computed: {
@@ -52,4 +54,3 @@ export default {
   }
 }
 </script>
-
