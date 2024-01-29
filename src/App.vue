@@ -25,8 +25,7 @@ export default {
   data() {
     return {
       radius: 60,
-      percent: 0.5,
-      progressColor: 'grey',
+      percent: 0.5
     }
   },
   computed: {
