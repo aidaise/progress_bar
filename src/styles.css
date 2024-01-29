@@ -1,0 +1,54 @@
+html, body {
+    background-color: rgb(178, 166, 234);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+}
+
+.progress-container {
+    position: relative;
+    text-align: center;
+}
+
+.input-label {
+    font-size: 16px;
+    color: white;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.percent {
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    background-color: rgba(237 237 237 / 25%);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    outline: none;
+    width: 50px;
+    margin-bottom: 20px;
+}
+
+.progress-ring {
+    width: 200px;
+    height: 200px;
+}
+
+.progress-ring__circle {
+    transform-origin: center;
+    transform: rotate(-90deg);
+    transition: stroke-dashoffset 0.3s;
+}
+
+.progress-text {
+    dominant-baseline: middle;
+    font-family: Arial, sans-serif;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
